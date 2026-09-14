@@ -245,6 +245,10 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2rem 0; }
 .hero .btn-outline { color: #fff; border-color: rgba(255,255,255,.6); }
 .hero .btn-outline:hover { background: rgba(255,255,255,.12); color: #fff; }
 .btn .ic { width: 1.1em; height: 1.1em; }
+.msg-row { display: flex; gap: .55rem; }
+.msg-row .btn-msg { flex: 1; padding-inline: .6rem; }
+.cta .msg-row .btn { width: auto; margin-bottom: .55rem; }
+.footer-msg a { font-weight: 600; }
 
 /* =========================================================
    Cards
@@ -538,3 +542,13 @@ td strong { color: var(--navy); }
   .doc-sample .doc-simple-head { margin-left: 15%; }
   .doc-sample table.doc-head td:first-child { width: 30%; }
 }
+
+/* Answer pages */
+.answers-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: .7rem 1.2rem; }
+.answers-list li { background: #fff; border: 1px solid var(--line); border-left: 4px solid var(--gold); border-radius: 8px; padding: .8rem 1rem; }
+.answers-list li a { text-decoration: none; font-weight: 600; color: var(--navy); display: block; }
+.answers-list li a:hover { color: var(--gold-2); text-decoration: underline; }
+.content .answers-list { margin: 1rem 0 1.6rem; }
+.footer-grid { grid-template-columns: 2fr 1fr 1.4fr 1fr; }
+@media (max-width: 960px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; } }
