@@ -129,6 +129,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2rem 0; }
 .header-inner {
   min-height: var(--header-h);
   display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding-block: .55rem;
 }
 .brand {
   display: inline-flex; align-items: center; gap: .7rem;
@@ -136,8 +137,8 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2rem 0; }
 }
 .brand-mark { width: 38px; height: 38px; flex: none; }
 .brand-text { display: flex; flex-direction: column; line-height: 1.12; }
-.brand-title { font-family: var(--font-head); font-weight: 600; font-size: 1.02rem; }
-@media (min-width: 1280px) { .brand-title, .brand-sub { white-space: nowrap; } }
+.brand-title { font-family: var(--font-head); font-weight: 600; font-size: 1.02rem; display: block; max-width: 12em; }
+@media (min-width: 1280px) { .brand-sub { white-space: nowrap; } }
 .header .container { max-width: 1280px; }
 .brand-sub { font-size: .78rem; color: var(--ink-3); letter-spacing: .01em; }
 
@@ -155,7 +156,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2rem 0; }
 .nav .nav-cta:hover { background: var(--navy-2); color: #fff; }
 
 .nav-toggle {
-  display: none; align-items: center; gap: .5rem;
+  display: none; align-items: center; justify-content: center; gap: .5rem; flex: none; align-self: center; line-height: 1.2;
   background: none; border: 1px solid var(--line-2); border-radius: 8px;
   padding: .5rem .7rem; font: inherit; font-weight: 600; color: var(--navy); cursor: pointer;
 }
@@ -175,6 +176,18 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2rem 0; }
   .nav a[aria-current="page"] { box-shadow: none; background: var(--blue-bg); }
   .nav .nav-cta { margin: .6rem 0 0; text-align: center; }
   .header.is-open .nav { display: flex; }
+}
+@media (max-width: 420px) {
+  .header-inner { gap: .5rem; }
+  .brand { gap: .55rem; }
+  .brand-title { font-size: .96rem; }
+  .brand-sub { font-size: .74rem; }
+  .nav-toggle { padding: .45rem .6rem; }
+}
+@media (max-width: 340px) {
+  .brand-mark { width: 32px; height: 32px; }
+  .brand-title { font-size: .88rem; }
+  .nav-toggle { padding: .4rem .5rem; font-size: .92rem; }
 }
 
 /* =========================================================
